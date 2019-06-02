@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Mar  6 13:06:53 2019
+# Process ID: 16360
+# Current directory: D:/Development/VivadoProject/ALU_32bit
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2416 D:\Development\VivadoProject\ALU_32bit\ALU_32bit.xpr
+# Log file: D:/Development/VivadoProject/ALU_32bit/vivado.log
+# Journal file: D:/Development/VivadoProject/ALU_32bit\vivado.jou
+#-----------------------------------------------------------
+start_guioopen_project D:/Development/VivadoProject/ALU_32bit/ALU_32bit.xpruupdate_compile_order -fileset sources_1
+launch_simulation
+source test_ALU.tcl
+close_sim
+close [ open D:/Development/VivadoProject/ALU_32bit/ALU_32bit.srcs/sources_1/new/switch_mode.sv w ]
+add_files D:/Development/VivadoProject/ALU_32bit/ALU_32bit.srcs/sources_1/new/switch_mode.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_design
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_design
+synth_design -rtl -name rtl_1
